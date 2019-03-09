@@ -1,0 +1,25 @@
+.navbar-right {
+
+  float: right;
+
+}
+
+p {
+
+  text-align: justify;
+
+}
+
+body {
+
+background: url(../static/img/texture.png);
+background-position: left top;
+background-repeat: repeat;
+
+}
+
+.row {
+
+background-color: #f8f9fa;
+
+}
