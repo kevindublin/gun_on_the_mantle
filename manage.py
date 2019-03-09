@@ -1,3 +1,4 @@
+# NOTE: This is all boilerplate, don't edit this file!! (Still run it, however)
 import sys
 import os
 from django.conf import settings

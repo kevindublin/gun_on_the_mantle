@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-
+  {% block content %}
       <div class="container">
 
         <!-- Page Heading -->
@@ -25,7 +25,7 @@
             </ul></p>
             <p><strong>Special Exception</strong></p>
             <p><em>Audible/Fair Exchange:</em> A player cannot use the same skill card (3) turns in a row. At the beginning of the third turn, the player is forced to exchange on the third turn before their turn begins, then proceed with play normally.</p>
-            <a class="btn btn-primary" href="rules.html">Return to Rulesheet</a>
+            <a class="btn btn-primary" href="rules">Return to Rulesheet</a>
           </div>
         </div>
       <!-- /.row -->
@@ -42,7 +42,7 @@
         <div class="col-md-5">
           <h3>Take a Coin</h3>
           <p>Take a coin: Take (1) coin from the bank. This cannot be countered or stopped.</p>
-          <a class="btn btn-primary" href="rules.html">Return to Rulesheet</a>
+          <a class="btn btn-primary" href="rules">Return to Rulesheet</a>
         </div>
       </div>
     <!-- /.row -->
@@ -59,7 +59,7 @@
       <div class="col-md-5">
         <h3>Exchange a Card</h3>
         <p>Pass your face-down card clockwise. The player who receives the card does not look, but chooses to either keep the discarded card and place their own at the bottom of the deck or pass the discarded card to the next player on their left. If each player passes the card, it returns to the bottom of the deck. The player who initiated the trade is allowed to draw a new card.</p>
-        <a class="btn btn-primary" href="rules.html">Return to Rulesheet</a>
+        <a class="btn btn-primary" href="rules">Return to Rulesheet</a>
       </div>
     </div>
   <!-- /.row -->
@@ -76,7 +76,7 @@
     <div class="col-md-5">
       <h3>Use a Card Skill</h3>
       <p>Whether you have the specific card or not, you may claim to have the card and use its abilities. The effect will take place, unless a counter skill stops it or the action is challenged.</p>
-      <a class="btn btn-primary" href="rules.html">Return to Rulesheet</a>
+      <a class="btn btn-primary" href="rules">Return to Rulesheet</a>
     </div>
   </div>
 <!-- /.row -->
@@ -94,8 +94,9 @@
             <h3>Take the Gun from the Mantle: </h3>
             <p>If a player begins a turn with (10) Coins, they must take the gun from the mantle and use it.</p>
             <p>The gun eliminates another player. When a player is eliminated, their coins are evenly divided amongst the remaining players with any uneven remainder going to the killer.</p>
-            <a class="btn btn-primary" href="rules.html">Return to Rulesheet</a>
+            <a class="btn btn-primary" href="rules">Return to Rulesheet</a>
           </div>
         </div>
       <!-- /.row -->
+
       {% endblock content %}

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-character_cards = [{
+cards = [{
     'card_title': 'Hacker',
     'card_skill_1': 'Steal: Take 2 coins from another player',
     'card_skill_2': 'Blocks inspection',
@@ -63,13 +63,13 @@ def play(request):
 
 
 def character_cards(request):
-    context = {character_cards}
-    return render(request, "character_cards.html", context)
+    context = {'all_cards': cards}
+    return render(request, "character-cards.html", context)
 
 
 def gameplay_details(request):
     context = {}
-    return render(request, "gameplay_details.html", context)
+    return render(request, "gameplay-details.html", context)
 
 
 def contact(request):

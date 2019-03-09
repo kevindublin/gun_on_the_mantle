@@ -1,23 +1,25 @@
 {% extends "base.html" %}
 
-
+{% block content %}
       <div class="container">
 
         <!-- Page Heading -->
         <h1 class="my-4">Character Cards</h1>
 
         <!-- Content One -->
-        {% for character in character_cards %}
+        {% for card in all_cards %}
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-1">
+              </div>
+             <div class="col-md-4">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" height='100%' src="{{ img_src }}" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" width="200" src="{{ card.img_src }}" alt="">
               </a>
             </div>
-            <div class="col-md-5">
-              <h3>{{ card_title }}</h3>
-              <p>{{ skill_one }}</p>
-              <p>{{ skill_two }}</p>
+            <div class="col-md-7">
+              <h3>{{ card.card_title }}</h3>
+              <p>{{ card.card_skill_1 }}</p>
+              <p>{{ card.card_skill_2 }}</p>
               <a class="btn btn-primary" href="rules">Return to Rulesheet</a>
             </div>
           </div>
