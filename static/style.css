@@ -49,13 +49,11 @@ background-color: #f8f9fa;
 
 }
 
-<!--
-navbar {
+.navbar {
 
   position: fixed;
 
 }
--->
 
 h1 {
   margin-left: .75em;
