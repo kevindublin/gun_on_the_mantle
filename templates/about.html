@@ -1,17 +1,21 @@
   {% extends "base.html" %}
 
+  {% block nav_rules_class %}{% endblock nav_rules_class %}
+  {% block nav_play_class %}{% endblock nav_play_class %}
+  {% block nav_about_class %}active{% endblock %}
+
   {% block content %}
   <!-- Page Content -->
 
       <div class="container">
 
         <!-- Page Heading -->
-        <h1 class="my-4">About the Game</h1>
+        <h1>About the Game</h1>
 
         <!-- Content One -->
         <div class="row">
           <div class="col-md-7">
-              <marquee behavior="slide" direction="left">
+              <marquee behavior="slide" direction="left" scrollamount="10">
                 <img src="../static/img/hacker.svg" height="300" alt="old_tag_not_supported">
                 <img src="../static/img/hunter.svg" height="300" alt="old_tag_not_supported">
                 <img src="../static/img/athlete.svg" height="300" alt="old_tag_not_supported">
@@ -19,21 +23,32 @@
                 <img src="../static/img/inspector.svg" height="300" alt="old_tag_not_supported">
                 <img src="../static/img/teacher.svg" height="300" alt="old_tag_not_supported">
               </marquee>
+              <br /><br /><br />
+              {% if email_sent == 'True' %}
+              {{ message }}
+              {% endif %}
           </div>
           <div class="col-md-5">
             <h3>Gun on the Mantle</h3>
             <p><em>Human greed is fueled by fear</em></p>
-            <p>You robbed a bank with several strangers from different professions, and you have all met up at the designated cabin hideout with the stash waiting. There's just one problem: <em>the gun on the mantle.</em> Up to twelve will enter, but only one will leave with the whole haul. Lie, cheat, and steal to eliminate others and leave with everything.</p>
+            <p>You robbed a bank with several strangers from different professions, and you have all met up at the designated cabin hideout in agreement with the stash waiting and no weapons. There's just one problem: <em>the gun on the mantle.</em> Up to twelve will enter, but only one will leave with the whole haul. Lie, cheat, and steal to eliminate others and leave with everything.</p>
             <br />
             <p>For 4-12 players, 6 recommended</p>
             <p>Ages: 10+</p>
             <p><strong>Game Designed by Kevin Dublin</strong></p>
             <p>Character icons made by <a href="http://www.freepik.com/">Freepik</a> at www.flaticon.com</p>
-            <a class="btn btn-primary" href="contact.html">Contact Creator</a>
+            <!--e-mail -->
+            <form action="send-email" method="POST">
+              {% csrf_token %}
+              <input class="small-input" name="name" placeholder="Name" />
+              <input class="small-input" name="email" type="email" placeholder="Email" />
+              <textarea class="large-input" name="message" placeholder="Message">
+              </textarea><br />
+              <button class= "btn btn-primary" type="submit">Contact Me</button>
+            </form>
             <br />
           </div>
         </div>
       <!-- /.row -->
 
-        <hr>
         {% endblock content %}

@@ -1,5 +1,12 @@
 {% extends "base.html" %}
+
+{% block nav_rules_class %}active{% endblock nav_rules_class %}
+{% block nav_play_class %}{% endblock nav_play_class %}
+{% block nav_about_class %}{% endblock nav_about_class %}
+
   {% block content %}
+
+
     <div class="container">
 
       <!-- Page Heading -->
@@ -7,17 +14,18 @@
 
       <!-- Section One -->
       <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
+        <div class="col-md-1">
+          </div>
         <div class="col-md-5">
+            <p class="bg-text">Gun</p>
+        </div>
+        <div class="col-md-6">
           <h3>Objective & Materials</h3>
           <p>The object of the game is to be the last player remaining.</p>
-          <p>The 24 card deck consists of four copies of six different character cards.</p>
+          <p>You need a <em>stash</em> of coins or counters and the 24 card deck that consists of four copies of six different character cards.</p>
           <p>Each character has two abilities: one skill, one counter skill.</p>
           <a class="btn btn-primary" href="character-cards">View Character Cards</a>
+          <br /><br />
         </div>
       </div>
       <!-- /.row -->
@@ -26,16 +34,17 @@
 
       <!-- Section Two -->
       <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
+        <div class="col-md-1">
+          </div>
         <div class="col-md-5">
+          <p class="bg-text-2">on</p>
+        </div>
+        <div class="col-md-6">
           <h3>Setup</h3>
           <p>Shuffle the card deck and deal each player one character card face-down and two coins.</p>
           <p>The stash holds the remaining coins. The remaining cards are set in a draw pile.</p>
-          <a class="btn btn-primary" href="#">View Sample Setup</a>
+          <a class="btn btn-primary" href="sample-setup">View Sample Setup</a>
+          <br /><br />
         </div>
       </div>
       <!-- /.row -->
@@ -44,24 +53,19 @@
 
       <!-- Section Three -->
       <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
+        <div class="col-md-1">
+          </div>
         <div class="col-md-5">
+          <p class="bg-text">the</p>
+        </div>
+        <div class="col-md-6">
           <h3>Gameplay</h3>
-          <p>Turns go around the table clockwise, beginning with the final player eliminated from the last game. If this is your first game, the oldest, gruffest player begins.</p>
-          <p>Each turn has four possible actions:</p>
-          <p><ul>
-            <li>Take a coin</li>
-            <li>Exchange a card</li>
-            <li>Use a skill from a card</li>
-            <li>Take the gun from the mantle</li>
-          </ul></p>
+          <p>Turns go around the table clockwise, beginning with the final player eliminated from the last game.</p>
+          <p>Each turn has four possible actions: <strong>take a coin</strong>, <strong>Exchange a card</strong>, <strong>Use a skill from a card</strong>, <strong>Take the gun from the mantle</strong>.</p>
           <p><strong>Special Exception</strong></p>
           <p><em>Audible/Fair Exchange:</em> A player cannot use the same skill card (3) turns in a row. At the beginning of the third turn, the player is forced to exchange on the third turn before their turn begins, then proceed with play normally.</p>
           <a class="btn btn-primary" href="gameplay-details">View Gameplay Details</a>
+          <br /><br />
         </div>
       </div>
       <!-- /.row -->
@@ -70,20 +74,20 @@
 
       <!-- Section Four -->
       <div class="row">
-
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
+      <div class="col-md-1">
         </div>
-        <div class="col-md-5">
+      <div class="col-md-5">
+          <p class="bg-text-2">Mantle</p>
+        </div>
+        <div class="col-md-6">
           <h3>Challenging</h3>
           <p>A challenge can be called when any skill or counter skill is invoked. Any player may challenge.</p>
           <p><ul>
             <li>If the player claiming the skill chooses <strong>not to reveal</strong> the appropriate card, they lose all of their coins and must draw a new card.</li>
             <li>If the player claiming the skill <strong>does reveal</strong> the appropriate card, the challenger loses all of their coins.</li>
           </ul></p>
-          <a class="btn btn-primary" href="#">View Example Scenario</a>
+          <a class="btn btn-primary" href="under-construction">View Example Scenario</a>
+          <br /><br />
         </div>
       </div>
       <!-- /.row -->
@@ -92,17 +96,17 @@
 
       <!-- Section Five -->
       <div class="row">
-
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
+        <div class="col-md-1">
+          </div>
         <div class="col-md-5">
+            <img class="img-fluid rounded mb-3 mb-md-0" width="600" src="../static/img/gun.svg" alt="">
+        </div>
+        <div class="col-md-6">
           <h3>Winning</h3>
           <p>The gun is used to eliminate another player. When a player is eliminated, their coins are evenly divided between the remaining players with any uneven remainder going to the killer.</p>
           <p>When all other players are eliminated, you may take your own coins and the stash. You win.</p>
-          <a class="btn btn-primary" href="#">View Example End Game</a>
+          <a class="btn btn-primary" href="under-construction">View Example End Game</a>
+          <br /><br />
         </div>
       </div>
       <!-- /.row -->

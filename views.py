@@ -1,33 +1,10 @@
 import requests
+import utils
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.core.mail import send_mail
 
-
-cards = [{
-    'card_title': 'Hacker',
-    'card_skill_1': 'Steal: Take 2 coins from another player',
-    'card_skill_2': 'Blocks inspection',
-    'img_src': '../static/img/hacker.svg'},
-    {'card_title': 'Inspector',
-        'card_skill_1': 'Inspect: Look at another card, then return it',
-        'card_skill_2': 'Blocks stealing',
-        'img_src': '../static/img/inspector.svg'},
-    {'card_title': 'Athlete',
-        'card_skill_1': 'Compete: Take 3 coins from the stash',
-        'card_skill_2': 'Blocks other competition',
-        'img_src': '../static/img/athlete.svg'},
-    {'card_title': 'Hunter',
-        'card_skill_1': 'Target: Pay 7 coins to take the gun from the mantle',
-        'card_skill_2': 'Skill cannot be replicated',
-        'img_src': '../static/img/hunter.svg'},
-    {'card_title': 'Scientist',
-        'card_skill_1': 'Replicate: Repeat the previous skill used',
-        'card_skill_2': 'Blocks exchanges',
-        'img_src': '../static/img/scientist.svg'},
-    {'card_title': 'Teacher',
-        'card_skill_1': 'Exchange: Switch this card with any player',
-        'card_skill_2': 'Blocks Targeting by Hunter',
-        'img_src': '../static/img/teacher.svg'}]
+cards = utils.write_cards()
 
 
 def about(request):
@@ -72,6 +49,23 @@ def gameplay_details(request):
     return render(request, "gameplay-details.html", context)
 
 
-def contact(request):
+def send_email(request):
+    print("sending contact form e-mail...")
+    send_mail(
+        subject=request.POST["name"]+" - About Gun on the Mantle",
+        message=request.POST["message"],
+        from_email=request.POST["email"],
+        recipient_list=['admin@kevindublin.com'],
+        fail_silently=True,
+        )
+    print('sent.')
+    context = {
+        'email_sent': 'True',
+        'message': 'Your e-mail was successfully sent!',
+    }
+    return render(request, "about.html", context)
 
-    return
+
+def sample_setup(request):
+    context = {}
+    return render(request, "sample-setup.html", context)

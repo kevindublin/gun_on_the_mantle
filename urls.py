@@ -9,9 +9,10 @@ urlpatterns = [
     path('rules', views.rules),
     path('play', views.play),
     path('character-cards', views.character_cards),
-    path('sample-setup', views.under_construction),
     path('gameplay-details', views.gameplay_details),
-    path('contact', views.contact),
+    path('under-construction', views.under_construction),
+    path('send-email', views.send_email),
+    path('sample-setup', views.sample_setup),
 ]
 
 # Boilerplate to include static files
