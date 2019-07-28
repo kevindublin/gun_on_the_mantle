@@ -29,9 +29,14 @@ def under_construction(request):
     ''')
 
 
-def example_scenario(request):
+def example_endgame(request):
     context = {}
-    return render(request, "example-scenario.html", context)
+    return render(request, "example-endgame.html", context)
+
+
+def example_challenge(request):
+    context = {}
+    return render(request, "example-challenge.html", context)
 
 
 def rules(request):

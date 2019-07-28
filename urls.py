@@ -10,7 +10,8 @@ urlpatterns = [
     path('play', views.play),
     path('character-cards', views.character_cards),
     path('gameplay-details', views.gameplay_details),
-    path('under-construction', views.under_construction),
+    path('example-challenge', views.example_challenge),
+    path('example-endgame', views.example_endgame),
     path('send-email', views.send_email),
     path('sample-setup', views.sample_setup),
 ]
