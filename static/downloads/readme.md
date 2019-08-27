@@ -2,6 +2,8 @@ Thank you for downloading Gun on the Mantle by Kevin Dublin
 
 When you are done playing, could you please fill out the survey at the link below?
 
+https://forms.gle/L336B8Jz5Xt97eCT8
+
 Here are some questions to have in mind while playing:
 
 
@@ -38,7 +40,6 @@ How would you rank this game using the BGG (1-10) scale?
 
 Why would you rank it at that position?
 
-What is your overall opinion of this game?
 
 How enjoyable was the game?
 
@@ -96,6 +97,8 @@ Too long
 Too short
 
 How many players do you think would be ideal for this game?
+
+What is your overall opinion of this game?
 
 Any additional comments?
 
