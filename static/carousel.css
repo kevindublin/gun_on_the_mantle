@@ -31,8 +31,8 @@ body {
   height: 32rem;
 }
 
-.challenge-list {
-
+.endgame-list {
+    list-style-type: none;
 }
 
 /* RESPONSIVE CSS
