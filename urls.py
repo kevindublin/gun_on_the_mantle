@@ -14,6 +14,7 @@ urlpatterns = [
     path('example-endgame', views.example_endgame),
     path('send-email', views.send_email),
     path('sample-setup', views.sample_setup),
+    path('survey', views.survey),
 ]
 
 # Boilerplate to include static files

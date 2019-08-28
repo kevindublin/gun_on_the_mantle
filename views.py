@@ -59,6 +59,11 @@ def gameplay_details(request):
     return render(request, "gameplay-details.html", context)
 
 
+def survey(request):
+    context = {}
+    return render(request, "survey.html", context)
+
+
 def send_email(request):
     print("sending contact form e-mail...")
     send_mail(
